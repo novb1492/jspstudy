@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%
     Cookie[] coo=request.getCookies();
+    String userid="";
     boolean i= false;
     if(coo!=null)
     {
@@ -10,6 +11,9 @@
     		if(c.getName().equals("idcookie"))
     		{
     		i=true;
+    		if(c.getName().equals("rememberid"))
+    		{
+    			userid=c.getValue();
     		}
     	}
     }
@@ -23,7 +27,7 @@
 <body>
 <% if(i==false){%>
 <form action="loginprocess.jsp" method="post">
-<input type="text" name="id"placeholder="id">
+<input type="text" name="id"placeholder="id"value="<%=userid%>">
 <input type="checkbox" name="idremember"placeholder="yes">
 <small>아이디 기억하기</small>
 <input type="password" name="pwd"placeholder="pwd">
