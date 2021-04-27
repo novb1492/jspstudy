@@ -7,11 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="process.jsp" method="post">
-<input type="text" name="id">
-<input type="password" name="pwd">
-<input type="checkbox" name="hobby" value="lead">독서<br>
-<input type="checkbox" name="hobby" value="sccocer">축구<br>
+<form action="ageprocess.jsp"method="post">
+<input type="text" name="age"value="age">
 <input type="submit">
 </form>
 </body>
