@@ -17,10 +17,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-인증문자<%=uuids[1] %></del>
+인증문자:<%=uuids[1] %>
 <form action="concertprocess.jsp">
-<input type="text"name="code"size="5">
-<input type="submit">
+	<input type="text"name="code"size="5">
+	<input type="submit">
 </form>
 </body>
 </html>

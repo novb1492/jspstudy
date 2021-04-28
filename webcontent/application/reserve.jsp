@@ -1,9 +1,15 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
-   // if(session.getAttribute("authpass")==null)
+    ArrayList<String>array=new ArrayList<>();
+    if(session.getAttribute("authpass")==null)
     {
-    	//response.sendRedirect("concert.jsp");
+    	response.sendRedirect("concert.jsp");
+    }
+    if(application.getAttribute("completelist")!=null)
+    {
+     array=(ArrayList<String>)application.getAttribute("completelist");
     }
     %>
 <!DOCTYPE html>
@@ -31,7 +37,14 @@
 				<%=r %>
 				<% for(char c='A';c<='Z';c++)
 				{%>
-				<input type="checkbox"name="seat"value="<%=c%>-<%=r%>">
+				<%if (array.contains(c+"-"+r))
+					{%>
+				<input type="checkbox"name="seat"value="<%=c%>-<%=r%>" disabled>
+				<%}
+				else
+				{%>
+					<input type="checkbox"name="seat"value="<%=c%>-<%=r%>" >
+				<%}%>
 				<%}%><br/>
 				
 				<%}%><br/>
