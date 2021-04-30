@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
   <%@ page import="kr.co.home.userbean" %>  
-  <%String id=request.getParameter("id");
+  <jsp:useBean id="user" class="kr.co.home.userbean" scope="request"></jsp:useBean>
+  <jsp:setProperty name="user" property="*"/>
+  <%--한줄로 처리되는거 실화냐????/ 단클래스 이름/변수이름 다 똑같이 잘확인--%>
+  <%--<%String id=request.getParameter("id");
   String pwd=request.getParameter("pwd");
   String name=request.getParameter("name");
   String email=request.getParameter("email");
   %>
-  <jsp:useBean id="user" class="kr.co.home.userbean" scope="request"></jsp:useBean>
+ 
   <jsp:setProperty name="user"  property="id" value="<%=id %>"/>
    <jsp:setProperty name="user"  property="pwd" value="<%=pwd %>"/>
     <jsp:setProperty name="user"  property="name" value="<%=name %>"/>
