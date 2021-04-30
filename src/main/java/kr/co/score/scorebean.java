@@ -4,7 +4,25 @@ public class scorebean {
 private int kok;
 private int math;
 private int english;
-public scorebean() {}
+private int total;
+public int getTotal() {
+	return total;
+}
+
+public void setTotal(int total) {
+	this.total = total;
+}
+private double avg;
+
+public scorebean(){}
+
+public double getAvg() {
+	return avg;
+}
+public void setAvg(double avg) {
+	this.avg = avg;
+}
+
 public int getKok() {
 	return kok;
 }

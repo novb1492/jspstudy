@@ -8,6 +8,6 @@
   int total=score.getKok()+score.getMath()+score.getEnglish();
   double avg=total/3;
   %>
-  <jsp:setProperty property="total" name="score" value="<%=total %>"/>
-  <jsp:setProperty property="avg" name="score"value="<%=avg %>"/>
+<jsp:setProperty  name="score" property="total" value="<%=total %>"/>
+<jsp:setProperty  name="score" property="avg" value="<%=avg %>"/><!-- 진짜 오타 조심하자 무슨 1시간째 이렇고 있냐20210430 -->
 <jsp:forward page="scoreuse.jsp"></jsp:forward>
